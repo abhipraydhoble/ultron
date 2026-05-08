@@ -55,9 +55,9 @@ resource "aws_security_group" "fw" {
 # create ec2 instance
 resource "aws_instance" "vm" {
  
-  ami                    = "ami-0bbafdf433890644d"
+  ami                    = "ami-0bbafdf433890644d"     # change ami id
   instance_type          = "t3.micro"
-  key_name               = "id_rsa"
+  key_name               = "id_rsa"                    # change keypair
   vpc_security_group_ids = [aws_security_group.fw.id]
   user_data              = <<-EOF
     #!/bin/bash

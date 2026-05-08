@@ -25,7 +25,7 @@ resource "aws_instance" "vm" {
 # create security group
 resource "aws_security_group" "fw" {
   name   = "tf-practice-sg"
-  vpc_id = "vpc-051c1a41d636a55fc"
+  vpc_id = "vpc-051c1a41d636a55fc"                #change vpc id
 
   # ingress means inbound rule
   ingress {
